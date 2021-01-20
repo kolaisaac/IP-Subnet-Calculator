@@ -1,3 +1,6 @@
+ipaddress = input("Enter IP Address:")
+subnetmask = input("Enter rate per Subnetmask:")
+
 def subnetcalculator(ipaddress, subnetmask):
     
     
@@ -88,15 +91,15 @@ def subnetcalculator(ipaddress, subnetmask):
 
  #### Print the class of IP address
     if int(ipaddress_list[0],2) < 128:
-        print "This is a Class A IP Address."
+        print("This is a Class A IP Address.")
     elif int(ipaddress_list[0],2) >= 128 and int(ipaddress_list[0],2) < 192:
-         print "This is a Class B IP Address."
+         print("This is a Class B IP Address.")
     elif int(ipaddress_list[0],2) >= 192 and int(ipaddress_list[0],2) < 224:
-         print "This is a Class C IP Address."
+         print("This is a Class C IP Address.")
     elif int(ipaddress_list[0],2) >= 224 and int(ipaddress_list[0],2) < 239:
-         print "This is a Class D IP Address and it is reserved for multicasting."
+         print("This is a Class D IP Address and it is reserved for multicasting.")
     elif int(ipaddress_list[0],2) >= 240 and int(ipaddress_list[0],2) <= 254:
-         print "This is a Class E IP Address and it is used for research."
+         print("This is a Class E IP Address and it is used for research.")
     else:
         pass
 
@@ -104,12 +107,12 @@ def subnetcalculator(ipaddress, subnetmask):
 
 #### Join the lists into a string and print
     if int(ipaddress_list[0],2) < 255:
-        print "The network address is %s" %(".".join(network_add))
-        print "The first IP address in this subnet is %s" %(".".join(first_add)) 
-        print "The last IP address in this subnet is %s" %(".".join(last_add))
-        print "The broadcast address is %s" %(".".join(broadcast_add))
+        print ("The network address is %s" %(".".join(network_add)))
+        print ("The first IP address in this subnet is %s" %(".".join(first_add))) 
+        print ("The last IP address in this subnet is %s" %(".".join(last_add)))
+        print ("The broadcast address is %s" %(".".join(broadcast_add)))
         
     else:
-        print "This is not a valid IP address."
+        print ("This is not a valid IP address.")
 
 subnetcalculator("254.8.128.8", "255.255.0.0")
